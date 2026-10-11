@@ -13,7 +13,7 @@
         body {
             font-family: Arial, sans-serif;
             background: #fdf6f4;
-            color: #30272a;
+            color: #331011;
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
@@ -121,13 +121,12 @@
             overflow: hidden;
         }
         .hero-photo {
-            width: 240px;
+            width: 300px;
             height: auto;
-            max-height: 320px;
+            max-height: 400px;
             object-fit: cover;
             border-radius: 20px;
             flex-shrink: 0;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
         }
         .hero-text-block {
             flex: 1;
@@ -145,17 +144,20 @@
             font-size: 48px;
             line-height: 0.95;
             margin-bottom: 16px;
+            color: #331011;
         }
         .hero-date {
             font-size: 17px;
             font-weight: bold;
             letter-spacing: 3px;
             margin-bottom: 14px;
+            color: #331011;
         }
         .hero-text {
             font-size: 16px;
-            opacity: 0.8;
+            opacity: 0.85;
             line-height: 1.4;
+            color: #331011;
         }
 
         .section {
@@ -165,6 +167,7 @@
             font-family: Georgia, serif;
             font-size: 28px;
             margin-bottom: 22px;
+            color: #331011;
         }
         .details {
             display: grid;
@@ -181,17 +184,20 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             opacity: 0.55;
+            color: #331011;
         }
         .detail-value {
             margin-top: 8px;
             font-weight: bold;
             font-size: 17px;
+            color: #331011;
         }
         .question {
             margin-top: 30px;
             margin-bottom: 12px;
             font-weight: bold;
             font-size: 17px;
+            color: #331011;
         }
         .options {
             display: grid;
@@ -209,15 +215,16 @@
             cursor: pointer;
             font-size: 15px;
             transition: all 0.2s;
+            color: #331011;
         }
         .option:hover {
             transform: translateY(-2px);
             background: #fdf2f5;
         }
         .option.selected {
-            background: #3d2f34;
+            background: #331011;
             color: white;
-            border-color: #3d2f34;
+            border-color: #331011;
         }
 
         .palette {
@@ -239,12 +246,24 @@
         .color-name {
             margin-top: 8px;
             font-size: 13px;
-            opacity: 0.75;
+            opacity: 0.8;
+            color: #331011;
         }
         .polka {
             background-color: #f5e8d3;
             background-image: radial-gradient(#d4a5a5 18%, transparent 19%);
             background-size: 14px 14px;
+        }
+
+        .palette-note {
+            margin-top: 18px;
+            font-size: 14px;
+            line-height: 1.5;
+            opacity: 0.75;
+            color: #331011;
+            background: #f9eef1;
+            padding: 14px 16px;
+            border-radius: 14px;
         }
 
         .gifts-grid {
@@ -259,6 +278,7 @@
             text-align: center;
             font-size: 14px;
             line-height: 1.35;
+            color: #331011;
         }
         .gift-emoji {
             display: block;
@@ -274,6 +294,7 @@
             font-size: 16px;
             font-family: inherit;
             outline: none;
+            color: #331011;
         }
         input:focus {
             border-color: #b88a96;
@@ -284,7 +305,7 @@
             border: none;
             border-radius: 17px;
             padding: 18px;
-            background: #3d2f34;
+            background: #331011;
             color: white;
             font-size: 16px;
             font-weight: bold;
@@ -293,7 +314,7 @@
         }
         .submit:hover {
             transform: translateY(-2px);
-            background: #2a2024;
+            background: #2a0d0e;
         }
         .submit:disabled {
             opacity: 0.6;
@@ -307,12 +328,14 @@
             border-radius: 17px;
             background: #e8f5e9;
             text-align: center;
+            color: #331011;
         }
         .footer {
             text-align: center;
             padding: 10px 25px 35px;
             font-size: 12px;
-            opacity: 0.5;
+            opacity: 0.55;
+            color: #331011;
         }
 
         @media (max-width: 650px) {
@@ -323,8 +346,8 @@
                 gap: 20px;
             }
             .hero-photo {
-                width: 200px;
-                max-height: 260px;
+                width: 240px;
+                max-height: 320px;
             }
             .hero-text-block {
                 text-align: center;
@@ -380,7 +403,7 @@
 <div class="container">
     <div class="card">
         <section class="hero">
-            <img src="IMG_4812.PNG" alt="Anna" class="hero-photo">
+            <img src="IMG_4809.PNG" alt="Anna" class="hero-photo">
             <div class="hero-text-block">
                 <div class="small-title">You are invited</div>
                 <h1>Anna's<br>Birthday</h1>
@@ -406,6 +429,7 @@
                 </div>
             </div>
 
+            <!-- ЦВЕТОВАЯ ПАЛИТРА -->
             <div class="question" style="margin-top: 40px;">Цветовая палитра на эту тусу 🎨</div>
             <div class="palette">
                 <div class="color-item">
@@ -413,27 +437,32 @@
                     <div class="color-name">Розовый</div>
                 </div>
                 <div class="color-item">
-                    <div class="color-box" style="background: #ff2400;"></div>
-                    <div class="color-name">Красный</div>
-                </div>
-                <div class="color-item">
                     <div class="color-box" style="background: #db7093;"></div>
                     <div class="color-name">Лиловый</div>
                 </div>
                 <div class="color-item">
-                    <div class="color-box" style="background: #f5f0e6;"></div>
-                    <div class="color-name">Молочный</div>
-                </div>
-                <div class="color-item">
-                    <div class="color-box" style="background: #ffffff; border: 1px solid #e0d5d8;"></div>
-                    <div class="color-name">Белый</div>
+                    <div class="color-box" style="background: #cd5b45;"></div>
+                    <div class="color-name">Тёмно-коралловый</div>
                 </div>
                 <div class="color-item">
                     <div class="color-box polka"></div>
                     <div class="color-name">Горох</div>
                 </div>
+                <div class="color-item">
+                    <div class="color-box" style="background: #efaf8c;"></div>
+                    <div class="color-name">Сомон</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-box" style="background: #fffafa; border: 1px solid #e8e0e0;"></div>
+                    <div class="color-name">Белоснежный</div>
+                </div>
             </div>
 
+            <div class="palette-note">
+                Если что это условность и ни в коем случае не обязательно. Вы можете прийти в любом цвете и в любой одежде, которая вам нравится 🫶🏻
+            </div>
+
+            <!-- ИДЕИ ДЛЯ ПОДАРОЧКА -->
             <div class="question" style="margin-top: 40px;">Идеи для подарочка 🎁</div>
             <div class="gifts-grid">
                 <div class="gift-card">
@@ -441,12 +470,16 @@
                     Ваше присутствие<br>на празднике
                 </div>
                 <div class="gift-card">
-                    <span class="gift-emoji">🌸</span>
-                    Цветочки
+                    <span class="gift-emoji">💌</span>
+                    Открытки
                 </div>
                 <div class="gift-card">
-                    <span class="gift-emoji">🪴</span>
-                    Растения в горшке
+                    <span class="gift-emoji">✨</span>
+                    Сюрпризы
+                </div>
+                <div class="gift-card">
+                    <span class="gift-emoji">🌸</span>
+                    Цветочки
                 </div>
                 <div class="gift-card">
                     <span class="gift-emoji">🧴</span>
@@ -457,16 +490,20 @@
                     Мягкие игрушки
                 </div>
                 <div class="gift-card">
+                    <span class="gift-emoji">🕯️</span>
+                    Аромадиффузоры
+                </div>
+                <div class="gift-card">
+                    <span class="gift-emoji">🛁</span>
+                    Штучки для ванны
+                </div>
+                <div class="gift-card">
+                    <span class="gift-emoji">🌿</span>
+                    Мох Цетрарии
+                </div>
+                <div class="gift-card">
                     <span class="gift-emoji">🎨</span>
-                    Картины по номерам<br>(не сложные)
-                </div>
-                <div class="gift-card">
-                    <span class="gift-emoji">💌</span>
-                    Открытки
-                </div>
-                <div class="gift-card">
-                    <span class="gift-emoji">✨</span>
-                    Сюрпризы
+                    Картины по номерам<br>(не сложные 😅)
                 </div>
             </div>
 
