@@ -33,21 +33,30 @@
         }
         .hero {
             text-align: center;
-            padding: 80px 25px 70px;
+            padding: 50px 25px 60px;
             background: linear-gradient(135deg, #d9b8c0, #f4e4e4);
+        }
+        .hero-photo {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin-bottom: 25px;
         }
         .small-title {
             font-size: 12px;
             letter-spacing: 5px;
             text-transform: uppercase;
             opacity: 0.65;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         h1 {
             font-family: Georgia, serif;
-            font-size: 60px;
+            font-size: 56px;
             line-height: 0.95;
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
         .hero-date {
             font-size: 18px;
@@ -55,7 +64,7 @@
             letter-spacing: 4px;
         }
         .hero-text {
-            margin-top: 25px;
+            margin-top: 22px;
             font-size: 16px;
             opacity: 0.75;
         }
@@ -124,8 +133,8 @@
         /* Цветовая палитра */
         .palette {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 12px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
             margin-top: 10px;
         }
         .color-item {
@@ -142,6 +151,13 @@
             margin-top: 8px;
             font-size: 13px;
             opacity: 0.75;
+        }
+
+        /* Горох на кремовом */
+        .polka {
+            background-color: #f5e8d3;
+            background-image: radial-gradient(#d4a5a5 18%, transparent 19%);
+            background-size: 14px 14px;
         }
 
         /* Идеи подарков */
@@ -215,7 +231,11 @@
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 45px;
+                font-size: 42px;
+            }
+            .hero-photo {
+                width: 130px;
+                height: 130px;
             }
             .details {
                 grid-template-columns: 1fr;
@@ -237,6 +257,7 @@
     <div class="card">
         <!-- ГЛАВНЫЙ ЭКРАН -->
         <section class="hero">
+            <img src="IMG_4807.PNG" alt="Anna" class="hero-photo">
             <div class="small-title">You are invited</div>
             <h1>Anna's<br>Birthday</h1>
             <div class="hero-date">30 · 11 · 2026</div>
@@ -282,6 +303,10 @@
                 <div class="color-item">
                     <div class="color-box" style="background: #ffffff; border: 1px solid #e0d5d8;"></div>
                     <div class="color-name">Белый</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-box polka"></div>
+                    <div class="color-name">Горох</div>
                 </div>
             </div>
 
