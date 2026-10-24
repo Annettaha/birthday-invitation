@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna's Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'DD_Font';
@@ -14,12 +17,6 @@
         @font-face {
             font-family: 'Gabriola';
             src: local('Gabriola'), url('Gabriola.ttf') format('truetype'), url('Gabriola.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Century Gothic';
-            src: local('Century Gothic'), local('CenturyGothic'), url('CenturyGothic.ttf') format('truetype'), url('CenturyGothic.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
@@ -164,8 +161,9 @@
             color: #331011;
         }
         .hero-text {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             font-size: 16px;
+            font-weight: 500;
             opacity: 0.85;
             line-height: 1.4;
             color: #331011;
@@ -174,8 +172,9 @@
             padding: 35px 30px;
         }
         .section-title {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
-            font-size: 28px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 26px;
+            font-weight: 600;
             margin-bottom: 22px;
             color: #331011;
         }
@@ -190,26 +189,27 @@
             border-radius: 20px;
         }
         .detail-label {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
-            font-size: 13px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
             opacity: 0.55;
             color: #331011;
         }
         .detail-value {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             margin-top: 8px;
-            font-weight: bold;
-            font-size: 18px;
+            font-weight: 600;
+            font-size: 17px;
             color: #331011;
         }
         .question {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             margin-top: 30px;
             margin-bottom: 12px;
-            font-weight: bold;
-            font-size: 20px;
+            font-weight: 600;
+            font-size: 19px;
             color: #331011;
         }
         .options {
@@ -220,7 +220,7 @@
             font-family: inherit;
         }
         .option {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             width: 100%;
             border: 1px solid #e0c8d0;
             background: white;
@@ -228,6 +228,7 @@
             border-radius: 16px;
             cursor: pointer;
             font-size: 16px;
+            font-weight: 500;
             transition: all 0.2s;
             color: #331011;
         }
@@ -257,9 +258,10 @@
             border: 1px solid rgba(0,0,0,0.04);
         }
         .color-name {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             margin-top: 8px;
-            font-size: 15px;
+            font-size: 14px;
+            font-weight: 500;
             opacity: 0.8;
             color: #331011;
         }
@@ -269,9 +271,10 @@
             background-size: 14px 14px;
         }
         .palette-note {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             margin-top: 18px;
-            font-size: 15px;
+            font-size: 14px;
+            font-weight: 500;
             line-height: 1.5;
             opacity: 0.75;
             color: #331011;
@@ -285,12 +288,13 @@
             gap: 12px;
         }
         .gift-card {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             background: #f9eef1;
             border-radius: 18px;
             padding: 18px 14px;
             text-align: center;
-            font-size: 15px;
+            font-size: 14px;
+            font-weight: 500;
             line-height: 1.35;
             color: #331011;
         }
@@ -305,7 +309,7 @@
             border-radius: 16px;
             padding: 16px;
             font-size: 16px;
-            font-family: inherit;
+            font-family: 'Quicksand', sans-serif;
             outline: none;
             color: #331011;
             resize: vertical;
@@ -317,6 +321,7 @@
             min-height: 90px;
         }
         .submit {
+            font-family: 'Quicksand', sans-serif;
             width: 100%;
             margin-top: 25px;
             border: none;
@@ -325,7 +330,7 @@
             background: #331011;
             color: white;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
             transition: 0.2s;
         }
@@ -346,6 +351,7 @@
             background: #e8f5e9;
             text-align: center;
             color: #331011;
+            font-family: 'Quicksand', sans-serif;
         }
         .footer {
             text-align: center;
@@ -361,11 +367,12 @@
             gap: 12px;
         }
         .await-item {
-            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-family: 'Quicksand', sans-serif;
             background: #f9eef1;
             border-radius: 18px;
             padding: 18px 16px;
             font-size: 15px;
+            font-weight: 500;
             line-height: 1.4;
             color: #331011;
             display: flex;
@@ -422,9 +429,10 @@
             text-align: center;
         }
         .theme-overlay span {
-            font-family: 'Gabriola', 'DD_Font', cursive;
-            font-size: 36px;
-            line-height: 1.15;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.2;
             color: #5b1e31;
             text-shadow: 0 2px 8px rgba(255,255,255,0.7), 0 1px 2px rgba(0,0,0,0.15);
         }
@@ -470,7 +478,7 @@
                 min-height: 180px;
             }
             .theme-overlay span {
-                font-size: 28px;
+                font-size: 22px;
             }
             .section {
                 padding: 30px 20px;
