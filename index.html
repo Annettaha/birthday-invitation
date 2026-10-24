@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna's Birthday</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <style>
         @font-face {
             font-family: 'DD_Font';
@@ -14,6 +16,7 @@
             font-weight: normal;
             font-style: normal;
         }
+
         @font-face {
             font-family: 'Gabriola';
             src: local('Gabriola'), url('Gabriola.ttf') format('truetype'), url('Gabriola.otf') format('opentype');
@@ -247,6 +250,15 @@
         .options {
             display: grid;
             gap: 10px;
+        }
+
+        .options-note {
+            font-family: 'Philosopher', Georgia, serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: #3d001e;
+            opacity: 0.75;
+            margin-bottom: 12px;
         }
 
         button {
@@ -565,6 +577,7 @@
     </style>
 </head>
 <body>
+    <!-- Декоративный фон -->
     <div class="bg-flowers">
         <div class="flower">🌸</div>
         <div class="flower">🌷</div>
@@ -574,15 +587,18 @@
         <div class="flower">🌸</div>
         <div class="flower">🌷</div>
         <div class="flower">💮</div>
+
         <div class="balloon">🎈</div>
         <div class="balloon">🎈</div>
         <div class="balloon">🎈</div>
         <div class="balloon">🎈</div>
+
         <div class="heart">💕</div>
         <div class="heart">💗</div>
         <div class="heart">💖</div>
         <div class="heart">💕</div>
         <div class="heart">💗</div>
+
         <div class="bow">🎀</div>
         <div class="bow">🎀</div>
         <div class="bow">🎀</div>
@@ -593,6 +609,7 @@
         <div class="card">
             <section class="hero">
                 <img src="IMG_4814.PNG" alt="Anna" class="hero-photo">
+
                 <div class="hero-text-block">
                     <div class="small-title">You are invited</div>
                     <h1>Anna's<br>Birthday</h1>
@@ -609,17 +626,21 @@
                         <div class="detail-label">Дата?</div>
                         <div class="detail-value">Выбираем вместе ♡</div>
                     </div>
+
                     <div class="detail">
                         <div class="detail-label">Начало</div>
                         <div class="detail-value">16:00</div>
                     </div>
+
                     <div class="detail" style="grid-column: 1 / -1;">
                         <div class="detail-label">Место</div>
                         <div class="detail-value">Мой шалаш на Дачной улице 41/1 🏠</div>
                     </div>
                 </div>
 
+                <!-- ЧТО ВАС ЖДЁТ -->
                 <div class="question" style="margin-top: 40px;">Что вас ждёт на празднике ✨</div>
+
                 <div class="await-grid">
                     <div class="await-item"><span>💕</span> Тёплая компания</div>
                     <div class="await-item"><span>🍰</span> Вкусные угощения</div>
@@ -631,19 +652,23 @@
                     <div class="await-item"><span>✨</span> Море хорошего настроения!</div>
                 </div>
 
+                <!-- ТЕМАТИКА -->
                 <div class="question" style="margin-top: 40px;">Тематика вечеринки</div>
+
                 <div class="theme-section">
                     <div class="theme-gallery">
                         <div class="theme-side">
                             <img src="бантики.png" alt="Бантики">
                             <img src="дождик.jpg" alt="Дождик">
                         </div>
+
                         <div class="theme-center">
                             <img src="розовый.jpg" alt="Розовый">
                             <div class="theme-overlay">
                                 <span>Гламур с шиком розового</span>
                             </div>
                         </div>
+
                         <div class="theme-side">
                             <img src="шары.jpg" alt="Шары">
                             <img src="крем.jpg" alt="Крем">
@@ -651,28 +676,35 @@
                     </div>
                 </div>
 
+                <!-- ЦВЕТОВАЯ ПАЛИТРА -->
                 <div class="question" style="margin-top: 40px;">Цветовая палитра на эту тусу 🎨</div>
+
                 <div class="palette">
                     <div class="color-item">
                         <div class="color-box" style="background: #ffc0cb;"></div>
                         <div class="color-name">Розовый</div>
                     </div>
+
                     <div class="color-item">
                         <div class="color-box" style="background: #fdbdba;"></div>
                         <div class="color-name">Бледно-пурпурный</div>
                     </div>
+
                     <div class="color-item">
                         <div class="color-box" style="background: #db7093;"></div>
                         <div class="color-name">Лиловый</div>
                     </div>
+
                     <div class="color-item">
                         <div class="color-box polka"></div>
                         <div class="color-name">Горох</div>
                     </div>
+
                     <div class="color-item">
                         <div class="color-box" style="background: #efaf8c;"></div>
                         <div class="color-name">Сомон</div>
                     </div>
+
                     <div class="color-item">
                         <div class="color-box" style="background: #fffafa; border: 1px solid #e8e0e0;"></div>
                         <div class="color-name">Белоснежный</div>
@@ -683,56 +715,73 @@
                     Если что это условность и ни в коем случае не обязательно. Вы можете прийти в любом цвете и в любой одежде, которая вам нравится 🫶🏻
                 </div>
 
+                <!-- ИДЕИ ДЛЯ ПОДАРКА -->
                 <div class="question" style="margin-top: 40px;">Идеи для подарочка 🎁</div>
+
                 <div class="gifts-grid">
                     <div class="gift-card">
                         <span class="gift-emoji">💕</span>
                         Ваше присутствие<br>на празднике
                     </div>
+
                     <div class="gift-card">
                         <span class="gift-emoji">💌</span>
                         Открытки
                     </div>
+
                     <div class="gift-card">
                         <span class="gift-emoji">✨</span>
                         Сюрпризы
                     </div>
+
                     <div class="gift-card">
                         <span class="gift-emoji">🌸</span>
                         Цветочки
                     </div>
+
                     <div class="gift-card">
                         <span class="gift-emoji">🧴</span>
                         Уходовая косметика
                     </div>
+
                     <div class="gift-card">
                         <span class="gift-emoji">🧸</span>
                         Мягкие игрушки
                     </div>
+
                     <div class="gift-card">
                         <span class="gift-emoji">🕯️</span>
                         Аромадиффузоры
                     </div>
+
                     <div class="gift-card">
                         <span class="gift-emoji">🛁</span>
                         Штучки для ванны
                     </div>
+
                     <div class="gift-card">
                         <span class="gift-emoji">🌿</span>
                         Мох Цетрарии
                     </div>
+
                     <div class="gift-card">
                         <span class="gift-emoji">🎨</span>
                         Картины по номерам<br>(не сложные 😅)
                     </div>
                 </div>
 
+                <!-- ВЫБОР ДАТ -->
                 <div class="question" style="margin-top: 40px;">Когда тебе удобно? 📅</div>
+
+                <div class="options-note">
+                    Можно выбрать несколько вариантов ответа ♡
+                </div>
+
                 <div class="options" id="date-choice">
-                    <button class="option" data-value="29 ноября">29 ноября</button>
-                    <button class="option" data-value="5 декабря">5 декабря</button>
-                    <button class="option" data-value="6 декабря">6 декабря</button>
-                    <button class="option" data-value="Ни одна дата не подходит">Ни одна дата не подходит</button>
+                    <button class="option" type="button" data-value="29 ноября">29 ноября</button>
+                    <button class="option" type="button" data-value="5 декабря">5 декабря</button>
+                    <button class="option" type="button" data-value="6 декабря">6 декабря</button>
+                    <button class="option" type="button" data-value="Ни одна дата не подходит">Ни одна дата не подходит</button>
                 </div>
 
                 <div class="question">Комментарий (если ни одна дата не подходит или есть пожелания)</div>
@@ -761,8 +810,7 @@
 
             buttons.forEach(button => {
                 button.addEventListener("click", () => {
-                    buttons.forEach(item => item.classList.remove("selected"));
-                    button.classList.add("selected");
+                    button.classList.toggle("selected");
                 });
             });
         }
@@ -770,10 +818,58 @@
         setupOptions("date-choice");
 
         function getSelected(groupId) {
-            const selected = document.querySelector("#" + groupId + " .selected");
-            return selected ? selected.dataset.value : "";
+            const selected = document.querySelectorAll("#" + groupId + " .selected");
+            return Array.from(selected).map(item => item.dataset.value);
         }
 
         document.getElementById("submit").addEventListener("click", async function() {
             const name = document.getElementById("name").value.trim();
-            const
+            const dateChoice = getSelected("date-choice");
+            const comment = document.getElementById("comment").value.trim();
+
+            if (!name) {
+                alert("Напиши, пожалуйста, своё имя ♡");
+                return;
+            }
+
+            if (dateChoice.length === 0) {
+                alert("Выбери, пожалуйста, хотя бы одну удобную дату ♡");
+                return;
+            }
+
+            const button = this;
+            button.disabled = true;
+            button.textContent = "Отправляю...";
+
+            try {
+                const response = await fetch(FORMSPREE_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        date: dateChoice.join(", "),
+                        comment: comment || "—",
+                        _subject: "Ответ на приглашение — " + name
+                    })
+                });
+
+                if (response.ok) {
+                    document.getElementById("success").style.display = "block";
+                    button.style.display = "none";
+                } else {
+                    alert("Что-то пошло не так. Попробуй ещё раз ♡");
+                    button.disabled = false;
+                    button.textContent = "Отправить ответ ♡";
+                }
+            } catch (error) {
+                alert("Ошибка отправки. Проверь интернет и попробуй ещё раз.");
+                button.disabled = false;
+                button.textContent = "Отправить ответ ♡";
+            }
+        });
+    </script>
+</body>
+</html>
