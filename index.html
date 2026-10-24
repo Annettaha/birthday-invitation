@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna's Birthday</title>
     <style>
+        @font-face {
+            font-family: 'DD_Font';
+            src: local('DD_Font'), url('DD_Font.ttf') format('truetype'), url('DD_Font.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lonelly Girl';
+            src: local('Lonelly Girl'), url('LonellyGirl.ttf') format('truetype'), url('LonellyGirl.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'DD_Font', Arial, sans-serif;
             background: #fdf6f4;
             color: #331011;
             min-height: 100vh;
@@ -132,7 +144,7 @@
             margin-bottom: 14px;
         }
         h1 {
-            font-family: Georgia, serif;
+            font-family: 'DD_Font', Georgia, serif;
             font-size: 48px;
             line-height: 0.95;
             margin-bottom: 16px;
@@ -155,7 +167,7 @@
             padding: 35px 30px;
         }
         .section-title {
-            font-family: Georgia, serif;
+            font-family: 'DD_Font', Georgia, serif;
             font-size: 28px;
             margin-bottom: 22px;
             color: #331011;
@@ -328,23 +340,78 @@
             opacity: 0.55;
             color: #331011;
         }
-        .await-list {
-            background: #f9eef1;
-            border-radius: 20px;
-            padding: 22px 20px;
-            font-size: 15px;
-            line-height: 1.6;
-            color: #331011;
+        /* Блок «Что вас ждёт» — ячейки */
+        .await-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
         }
-        .theme-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #f8d7e0, #f3e5f5);
-            padding: 12px 18px;
-            border-radius: 16px;
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 8px;
+        .await-item {
+            background: #f9eef1;
+            border-radius: 18px;
+            padding: 18px 16px;
+            font-size: 14px;
+            line-height: 1.4;
             color: #331011;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .await-item span {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        /* Тематика с картинками */
+        .theme-section {
+            margin-top: 10px;
+        }
+        .theme-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr 1fr;
+            gap: 12px;
+            align-items: stretch;
+        }
+        .theme-side {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .theme-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+        .theme-center {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            min-height: 220px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        .theme-center img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .theme-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 240, 245, 0.35);
+            padding: 16px;
+            text-align: center;
+        }
+        .theme-overlay span {
+            font-family: 'Lonelly Girl', 'DD_Font', cursive;
+            font-size: 28px;
+            line-height: 1.15;
+            color: #331011;
+            text-shadow: 0 2px 8px rgba(255,255,255,0.8), 0 1px 2px rgba(0,0,0,0.15);
         }
         @media (max-width: 650px) {
             .hero {
@@ -371,6 +438,24 @@
             }
             .gifts-grid {
                 grid-template-columns: 1fr;
+            }
+            .await-grid {
+                grid-template-columns: 1fr;
+            }
+            .theme-gallery {
+                grid-template-columns: 1fr;
+            }
+            .theme-side {
+                flex-direction: row;
+            }
+            .theme-side img {
+                height: 120px;
+            }
+            .theme-center {
+                min-height: 180px;
+            }
+            .theme-overlay span {
+                font-size: 22px;
             }
             .section {
                 padding: 30px 20px;
@@ -415,18 +500,7 @@
             </div>
         </section>
         <section class="section">
-            <!-- ВЫБОР ДАТЫ -->
-            <div class="question" style="margin-top: 0;">Когда тебе удобно? 📅</div>
-            <div class="options" id="date-choice">
-                <button class="option" data-value="29 ноября">29 ноября</button>
-                <button class="option" data-value="5 декабря">5 декабря</button>
-                <button class="option" data-value="6 декабря">6 декабря</button>
-                <button class="option" data-value="Ни одна дата не подходит">Ни одна дата не подходит</button>
-            </div>
-            <div class="question">Комментарий (если ни одна дата не подходит или есть пожелания)</div>
-            <textarea id="comment" placeholder="Напиши, когда тебе удобнее, или оставь пожелание..."></textarea>
-
-            <h2 class="section-title" style="margin-top: 40px;">Когда и где? ✨</h2>
+            <h2 class="section-title">Когда и где? ✨</h2>
             <div class="details">
                 <div class="detail">
                     <div class="detail-label">Дата?</div>
@@ -444,16 +518,39 @@
 
             <!-- ЧТО ВАС ЖДЁТ -->
             <div class="question" style="margin-top: 40px;">Что вас ждёт на празднике ✨</div>
-            <div class="await-list">
-                Тёплая компания, вкусные угощения, хэнд-мэйд торт, весёлые конкурсы, импровизированная фотозона, рукоделие и море хорошего настроения!
+            <div class="await-grid">
+                <div class="await-item"><span>💕</span> Тёплая компания</div>
+                <div class="await-item"><span>🍰</span> Вкусные угощения</div>
+                <div class="await-item"><span>🎂</span> Хэнд-мэйд торт</div>
+                <div class="await-item"><span>🎉</span> Весёлые конкурсы</div>
+                <div class="await-item"><span>📸</span> Импровизированная фотозона</div>
+                <div class="await-item"><span>✂️</span> Рукоделие</div>
+                <div class="await-item" style="grid-column: 1 / -1;"><span>✨</span> И море хорошего настроения!</div>
             </div>
 
-            <!-- ТЕМАТИКА -->
+            <!-- ТЕМАТИКА С КАРТИНКАМИ -->
             <div class="question" style="margin-top: 40px;">Тематика вечеринки</div>
-            <div class="theme-badge">Гламур с шиком розового ✨</div>
+            <div class="theme-section">
+                <div class="theme-gallery">
+                    <div class="theme-side">
+                        <img src="бантики.png" alt="Бантики">
+                        <img src="дождик.jpg" alt="Дождик">
+                    </div>
+                    <div class="theme-center">
+                        <img src="розовый.jpg" alt="Розовый">
+                        <div class="theme-overlay">
+                            <span>Гламур с шиком розового</span>
+                        </div>
+                    </div>
+                    <div class="theme-side">
+                        <img src="шары.jpg" alt="Шары">
+                        <img src="крем.jpg" alt="Крем">
+                    </div>
+                </div>
+            </div>
 
             <!-- ЦВЕТОВАЯ ПАЛИТРА -->
-            <div class="question" style="margin-top: 30px;">Цветовая палитра на эту тусу 🎨</div>
+            <div class="question" style="margin-top: 40px;">Цветовая палитра на эту тусу 🎨</div>
             <div class="palette">
                 <div class="color-item">
                     <div class="color-box" style="background: #ffc0cb;"></div>
@@ -483,6 +580,17 @@
             <div class="palette-note">
                 Если что это условность и ни в коем случае не обязательно. Вы можете прийти в любом цвете и в любой одежде, которая вам нравится 🫶🏻
             </div>
+
+            <!-- ВЫБОР ДАТЫ (после палитры) -->
+            <div class="question" style="margin-top: 40px;">Когда тебе удобно? 📅</div>
+            <div class="options" id="date-choice">
+                <button class="option" data-value="29 ноября">29 ноября</button>
+                <button class="option" data-value="5 декабря">5 декабря</button>
+                <button class="option" data-value="6 декабря">6 декабря</button>
+                <button class="option" data-value="Ни одна дата не подходит">Ни одна дата не подходит</button>
+            </div>
+            <div class="question">Комментарий (если ни одна дата не подходит или есть пожелания)</div>
+            <textarea id="comment" placeholder="Напиши, когда тебе удобнее, или оставь пожелание..."></textarea>
 
             <!-- ИДЕИ ДЛЯ ПОДАРОЧКА -->
             <div class="question" style="margin-top: 40px;">Идеи для подарочка 🎁</div>
