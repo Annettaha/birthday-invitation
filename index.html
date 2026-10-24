@@ -17,6 +17,12 @@
             font-weight: normal;
             font-style: normal;
         }
+        @font-face {
+            font-family: 'Century Gothic';
+            src: local('Century Gothic'), local('CenturyGothic'), url('CenturyGothic.ttf') format('truetype'), url('CenturyGothic.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
         * {
             box-sizing: border-box;
             margin: 0;
@@ -158,6 +164,7 @@
             color: #331011;
         }
         .hero-text {
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
             font-size: 16px;
             opacity: 0.85;
             line-height: 1.4;
@@ -167,8 +174,8 @@
             padding: 35px 30px;
         }
         .section-title {
-            font-family: 'Gabriola', 'DD_Font', cursive;
-            font-size: 32px;
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-size: 28px;
             margin-bottom: 22px;
             color: #331011;
         }
@@ -183,26 +190,26 @@
             border-radius: 20px;
         }
         .detail-label {
-            font-family: 'Gabriola', 'DD_Font', cursive;
-            font-size: 14px;
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
+            font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 2px;
             opacity: 0.55;
             color: #331011;
         }
         .detail-value {
-            font-family: 'Gabriola', 'DD_Font', cursive;
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
             margin-top: 8px;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 18px;
             color: #331011;
         }
         .question {
-            font-family: 'Gabriola', 'DD_Font', cursive;
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
             margin-top: 30px;
             margin-bottom: 12px;
             font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
             color: #331011;
         }
         .options {
@@ -213,14 +220,14 @@
             font-family: inherit;
         }
         .option {
-            font-family: 'Gabriola', 'DD_Font', cursive;
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
             width: 100%;
             border: 1px solid #e0c8d0;
             background: white;
             padding: 16px;
             border-radius: 16px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px;
             transition: all 0.2s;
             color: #331011;
         }
@@ -250,9 +257,9 @@
             border: 1px solid rgba(0,0,0,0.04);
         }
         .color-name {
-            font-family: 'Gabriola', 'DD_Font', cursive;
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
             margin-top: 8px;
-            font-size: 16px;
+            font-size: 15px;
             opacity: 0.8;
             color: #331011;
         }
@@ -262,9 +269,9 @@
             background-size: 14px 14px;
         }
         .palette-note {
-            font-family: 'Gabriola', 'DD_Font', cursive;
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
             margin-top: 18px;
-            font-size: 17px;
+            font-size: 15px;
             line-height: 1.5;
             opacity: 0.75;
             color: #331011;
@@ -278,12 +285,12 @@
             gap: 12px;
         }
         .gift-card {
-            font-family: 'Gabriola', 'DD_Font', cursive;
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
             background: #f9eef1;
             border-radius: 18px;
             padding: 18px 14px;
             text-align: center;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.35;
             color: #331011;
         }
@@ -354,11 +361,11 @@
             gap: 12px;
         }
         .await-item {
-            font-family: 'Gabriola', 'DD_Font', cursive;
+            font-family: 'Century Gothic', 'CenturyGothic', Arial, sans-serif;
             background: #f9eef1;
             border-radius: 18px;
             padding: 18px 16px;
-            font-size: 17px;
+            font-size: 15px;
             line-height: 1.4;
             color: #331011;
             display: flex;
@@ -418,8 +425,8 @@
             font-family: 'Gabriola', 'DD_Font', cursive;
             font-size: 36px;
             line-height: 1.15;
-            color: #ffffff;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.25);
+            color: #5b1e31;
+            text-shadow: 0 2px 8px rgba(255,255,255,0.7), 0 1px 2px rgba(0,0,0,0.15);
         }
         @media (max-width: 650px) {
             .hero {
@@ -635,7 +642,7 @@
                 </div>
             </div>
 
-            <!-- ВЫБОР ДАТЫ (в самом конце, перед именем) -->
+            <!-- ВЫБОР ДАТЫ -->
             <div class="question" style="margin-top: 40px;">Когда тебе удобно? 📅</div>
             <div class="options" id="date-choice">
                 <button class="option" data-value="29 ноября">29 ноября</button>
